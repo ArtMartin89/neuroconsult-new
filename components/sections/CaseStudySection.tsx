@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/Card'
-import { TrendingUp, CheckCircle2 } from 'lucide-react'
+import { TrendingUp, CheckCircle2, DollarSign, BarChart3, Clock, Target, Rocket } from 'lucide-react'
 
 const caseStudies = [
   {
@@ -163,12 +163,27 @@ export const CaseStudySection = () => {
           <p className="text-slate-300 mb-4">
             Но через полгода разница окупается <span className="font-semibold text-accent">в 3-7 раз</span>:
           </p>
-          <ul className="space-y-2 text-slate-300 mb-6">
-            <li>💰 <span className="font-semibold">Вы перестаёте терять деньги</span> на хаосе, неэффективности, воровстве</li>
-            <li>📈 <span className="font-semibold">Получаете системный рост</span>, а не локальные улучшения</li>
-            <li>⏰ <span className="font-semibold">Экономите своё время</span> (а это самый дорогой ресурс)</li>
-            <li>🎯 <span className="font-semibold">Избегаете дорогих ошибок</span> самостоятельных экспериментов</li>
-            <li>🚀 <span className="font-semibold">Масштабируетесь без проблем</span>, потому что система готова к росту</li>
+          <ul className="space-y-3 text-slate-300 mb-6">
+            <li className="flex gap-3 items-start">
+              <DollarSign className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+              <span><span className="font-semibold">Вы перестаёте терять деньги</span> на хаосе, неэффективности, воровстве</span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <BarChart3 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+              <span><span className="font-semibold">Получаете системный рост</span>, а не локальные улучшения</span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+              <span><span className="font-semibold">Экономите своё время</span> (а это самый дорогой ресурс)</span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <Target className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+              <span><span className="font-semibold">Избегаете дорогих ошибок</span> самостоятельных экспериментов</span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <Rocket className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+              <span><span className="font-semibold">Масштабируетесь без проблем</span>, потому что система готова к росту</span>
+            </li>
           </ul>
           <p className="text-lg font-semibold text-accent text-center">
             Мы продаём не часы работы консультантов, а измеримый рост бизнеса.
