@@ -4,7 +4,7 @@ import { Zap, Network, TrendingUp, DollarSign, Target, Settings, Users, BarChart
 const levels = [
   {
     icon: Zap,
-    title: 'AI-микросервисы',
+    title: 'ИИ-микросервисы',
     subtitle: 'быстрый старт, точечные решения',
     items: [
       'Ассистенты для ключевых сотрудников',
@@ -68,7 +68,7 @@ export const CVPSection = () => {
 
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-center mb-4 text-accent">
-            Синергия системного консалтинга и AI-автоматизации
+            Синергия системного консалтинга и ИИ-автоматизации
           </h3>
           <p className="text-center text-slate-300 max-w-4xl mx-auto mb-6">
             Мы не продаём вам «волшебный ИИ» или «готовый регламент». Мы строим управляемую систему бизнеса, где:
@@ -144,7 +144,7 @@ export const CVPSection = () => {
 
         <div className="mt-12 bg-slate-800 border border-accent rounded-lg p-6 max-w-4xl mx-auto">
           <p className="text-slate-300 text-center">
-            <span className="font-semibold text-accent">Ключевое отличие:</span> Мы входим через доступные AI-решения (от 50 тыс. ₽/мес), которые дают быстрый эффект. А параллельно выстраиваем системный фундамент для долгосрочного роста. Вы не переплачиваете за «большой консалтинг» на старте, но получаете комплексную стратегию.
+            <span className="font-semibold text-accent">Ключевое отличие:</span> Мы входим через доступные ИИ-решения, которые дают быстрый эффект. А параллельно выстраиваем системный фундамент для долгосрочного роста. Вы не переплачиваете за «большой консалтинг» на старте, но получаете комплексную стратегию.
           </p>
         </div>
       </div>
