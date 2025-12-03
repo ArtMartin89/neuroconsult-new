@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neuroconsult.by/sitemap.xml
+
