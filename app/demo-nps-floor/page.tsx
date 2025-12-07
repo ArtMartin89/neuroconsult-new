@@ -72,7 +72,7 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/demo-floor1", {
+      const response = await fetch("https://clecucuci.beget.app/webhook/demo-nps-floorconcept", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
