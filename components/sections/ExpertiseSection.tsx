@@ -1,7 +1,6 @@
 import { Counter } from '@/components/ui/Counter'
 import { Card } from '@/components/ui/Card'
 import { Target, BarChart3, Settings, Bot, Users, DollarSign } from 'lucide-react'
-import Image from 'next/image'
 
 const teamMembers = [
   { icon: Target, title: 'Стратеги', desc: 'понимают логику бизнеса в вашей отрасли, видят картину целиком' },
@@ -82,12 +81,11 @@ export const ExpertiseSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           <div className="bg-slate-800 border border-accent rounded-lg p-6 md:p-8">
             <div className="text-center mb-4">
-              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden relative">
-                <Image
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-slate-700">
+                <img
                   src="/assets/art.png"
                   alt="Артур Мартынюк"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">
@@ -109,12 +107,11 @@ export const ExpertiseSection = () => {
 
           <div className="bg-slate-800 border border-accent rounded-lg p-6 md:p-8">
             <div className="text-center mb-4">
-              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden relative">
-                <Image
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-slate-700">
+                <img
                   src="/assets/den.jpg"
                   alt="Денис Варламов"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">
