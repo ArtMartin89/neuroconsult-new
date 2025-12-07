@@ -2,13 +2,35 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { useState, useEffect } from "react";
 
-const demoPages = [
-  { name: "Демо 1 этаж", path: "/demos/demo-floor1", description: "Демонстрация работы с первым этажом" },
-  { name: "Демо NPS", path: "/demos/demo-nps-floor", description: "Демонстрация системы NPS" },
-];
+interface DemoPage {
+  name: string;
+  path: string;
+  description: string;
+}
 
 export default function ChatsPage() {
+  const [demoPages, setDemoPages] = useState<DemoPage[]>([]);
+  const [isLoadingDemos, setIsLoadingDemos] = useState(true);
+
+  useEffect(() => {
+    const fetchDemos = async () => {
+      try {
+        const response = await fetch('/api/demos/list');
+        const data = await response.json();
+        setDemoPages(data.demos || []);
+      } catch (error) {
+        console.error('Error fetching demos:', error);
+        setDemoPages([]);
+      } finally {
+        setIsLoadingDemos(false);
+      }
+    };
+
+    fetchDemos();
+  }, []);
+
   return (
     <>
       <header className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl border-b border-white/10">
@@ -63,21 +85,31 @@ export default function ChatsPage() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {demoPages.map((demo) => (
-                <Link key={demo.path} href={demo.path}>
-                  <div className="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 transition-all hover:bg-white/10 hover:border-accent/30">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
-                      {demo.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-slate-400">
-                      {demo.description}
-                    </p>
-                    <div className="mt-4 inline-flex items-center text-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                      Перейти к демо →
+              {isLoadingDemos ? (
+                <div className="col-span-full text-center py-8">
+                  <p className="text-slate-400">Загрузка демо...</p>
+                </div>
+              ) : demoPages.length > 0 ? (
+                demoPages.map((demo) => (
+                  <Link key={demo.path} href={demo.path}>
+                    <div className="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 transition-all hover:bg-white/10 hover:border-accent/30">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                        {demo.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-slate-400">
+                        {demo.description}
+                      </p>
+                      <div className="mt-4 inline-flex items-center text-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        Перейти к демо →
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))
+              ) : (
+                <div className="col-span-full text-center py-8">
+                  <p className="text-slate-400">Демо-страницы не найдены</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
