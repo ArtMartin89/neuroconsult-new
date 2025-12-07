@@ -31,7 +31,7 @@ export function Footer() {
             </nav>
 
             <Link
-              href="/chatai"
+              href="/chats"
               className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/20 px-4 py-2 text-sm uppercase tracking-[0.35em] text-accent transition hover:bg-accent/40"
             >
               Чат с ИИ
