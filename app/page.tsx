@@ -6,19 +6,23 @@ import { ExpertiseSection } from '@/components/sections/ExpertiseSection'
 import { CaseStudySection } from '@/components/sections/CaseStudySection'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { ConversionFormSection } from '@/components/sections/ConversionFormSection'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <HeroBlock />
-      <PainPointsSection />
-      <CVPSection />
-      <TimelineSection />
-      <ExpertiseSection />
-      <CaseStudySection />
-      <FAQSection />
-      <ConversionFormSection />
-    </main>
+    <>
+      <main className="min-h-screen">
+        <HeroBlock />
+        <PainPointsSection />
+        <CVPSection />
+        <TimelineSection />
+        <ExpertiseSection />
+        <CaseStudySection />
+        <FAQSection />
+        <ConversionFormSection />
+      </main>
+      <Footer />
+    </>
   )
 }
 
