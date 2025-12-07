@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { Navigation } from "@/components/navigation";
 import { Send, Loader2 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 interface Message {
   id: string;
@@ -72,7 +72,7 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/demo-floor1", {
+      const response = await fetch("/api/demos/demo-floor1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -174,7 +174,21 @@ export default function ChatPage() {
 
   return (
     <>
-      <Navigation />
+      <header className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl border-b border-white/10">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10 lg:px-12">
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-3"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-accent/50 bg-accent/10 text-lg font-semibold text-accent shadow-[0_0_30px_rgba(0,123,255,0.35)] group-hover:shadow-[0_0_40px_rgba(0,123,255,0.45)]">
+              NΞ
+            </span>
+            <span className="text-sm font-semibold tracking-[0.35em] text-foreground/80">
+              NeuroConsult
+            </span>
+          </Link>
+        </div>
+      </header>
       <main className="min-h-screen pb-8">
         <div className="mx-auto max-w-4xl px-6 pt-8 sm:px-10 lg:px-12">
           <div className="mb-6">
