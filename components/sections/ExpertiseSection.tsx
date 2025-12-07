@@ -1,6 +1,7 @@
 import { Counter } from '@/components/ui/Counter'
 import { Card } from '@/components/ui/Card'
 import { Target, BarChart3, Settings, Bot, Users, DollarSign } from 'lucide-react'
+import Image from 'next/image'
 
 const teamMembers = [
   { icon: Target, title: 'Стратеги', desc: 'понимают логику бизнеса в вашей отрасли, видят картину целиком' },
@@ -22,7 +23,7 @@ export const ExpertiseSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <Counter end={25} suffix="+" />
-            <p className="text-slate-300 mt-2 text-sm">лет суммарного опыта команды</p>
+            <p className="text-slate-300 mt-2 text-sm">лет опыта команды</p>
           </div>
           <div className="text-center">
             <Counter end={14} suffix="+" />
@@ -78,25 +79,63 @@ export const ExpertiseSection = () => {
           </p>
         </div>
 
-        <div className="bg-slate-800 border border-accent rounded-lg p-6 md:p-8 max-w-3xl mx-auto">
-          <div className="text-center mb-4">
-            <div className="w-24 h-24 bg-slate-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <Users className="w-12 h-12 text-accent" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="bg-slate-800 border border-accent rounded-lg p-6 md:p-8">
+            <div className="text-center mb-4">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden relative">
+                <Image
+                  src="/assets/art.png"
+                  alt="Артур Мартынюк"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">
+                Артур Мартынюк, со-основатель NeuroConsult
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">
-              Имя Основателя, со-основатель NeuroConsult
-            </h3>
+            <div className="text-slate-300 space-y-3">
+              <p>
+                9+ лет в управлении и системном развитии бизнеса. Построил 2 компании, пройдя путь от 2 человек до 35+. Управлял продажами, операциями, автоматизациями — знаю боли собственника изнутри.
+              </p>
+              <p>
+                Последние 2 года внедряю ИИ и автоматизацию — сначала в свои бизнесы, затем для клиентов.
+              </p>
+              <p className="italic text-accent mt-4">
+                Моя задача — чтобы вы спокойно спали, зная, что бизнес работает как система, а не держится на вас.
+              </p>
+            </div>
           </div>
-          <div className="text-slate-300 space-y-3">
-            <p>
-              15+ лет в управлении и системном развитии бизнеса. Построил и продал 2 компании, пройдя путь от 3 человек до 150+. Управлял финансами, продажами, операциями — знаю боли собственника изнутри.
-            </p>
-            <p>
-              Последние 5 лет внедряю ИИ и автоматизацию — сначала в свои бизнесы, затем для клиентов.
-            </p>
-            <p className="italic text-accent mt-4">
-              Моя задача — чтобы вы спокойно спали, зная, что бизнес работает как система, а не держится на вас.
-            </p>
+
+          <div className="bg-slate-800 border border-accent rounded-lg p-6 md:p-8">
+            <div className="text-center mb-4">
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden relative">
+                <Image
+                  src="/assets/den.jpg"
+                  alt="Денис Варламов"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">
+                Денис Варламов, со-основатель NeuroConsult
+              </h3>
+            </div>
+            <div className="text-slate-300 space-y-3">
+              <p>
+                25 лет управления различными проектами 10-800 человек.
+              </p>
+              <div>
+                <p className="font-semibold text-foreground mb-2">Компетенции:</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• Управление проектом и персоналом.</li>
+                  <li>• Оценка рисков.</li>
+                  <li>• Создание стратегии предприятия/проекта, маркетинг.</li>
+                  <li>• Ведение переговоров, клиентская политика.</li>
+                  <li>• Юридические схемы сделок, бизнесов.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

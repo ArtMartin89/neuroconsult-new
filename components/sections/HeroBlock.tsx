@@ -51,7 +51,7 @@ export const HeroBlock = () => {
           onClick={scrollToForm}
           className="mb-8"
         >
-          Получить бесплатную диагностику вашего бизнеса
+          Получить диагностику вашего бизнеса
         </Button>
 
         <div className="flex justify-center mt-12 animate-bounce">

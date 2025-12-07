@@ -1,4 +1,7 @@
+'use client'
+
 import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 import { Zap, Network, TrendingUp, DollarSign, Target, Settings, Users, BarChart3 } from 'lucide-react'
 
 const levels = [
@@ -118,6 +121,17 @@ export const CVPSection = () => {
               )
             })}
           </div>
+        </div>
+
+        <div className="mb-12 text-center">
+          <Button
+            size="lg"
+            onClick={() => {
+              document.getElementById('conversion-form')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            Заказать комплексный подход
+          </Button>
         </div>
 
         <div>
